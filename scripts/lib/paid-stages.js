@@ -22,6 +22,7 @@ export const PAID_STAGES = {
   fable: { label: "fable model", cap: 1, script: "model-matrix.js", args: ["--case", "fable:medium"] },
   "fable-5.1": { label: "fable 5.1 model", cap: 1, script: "model-matrix.js", args: ["--case", "fable-5.1:medium"] },
   opus: { label: "opus model", cap: 1, script: "model-matrix.js", args: ["--case", "opus:medium"] },
+  "opus-5.5": { label: "opus 5.5 model", cap: 1, script: "model-matrix.js", args: ["--case", "opus-5.5:medium"] },
   matrix: { label: "model matrix", cap: 20, script: "model-matrix.js", args: [] },
 };
 

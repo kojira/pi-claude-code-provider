@@ -45,8 +45,13 @@ export function baseClaudeArgs(): string[] {
   ];
 }
 
+const CANONICAL_MODEL_NAMES: Record<string, string> = {
+  "fable-5.1": "claude-fable-5-1",
+  "opus-5.5": "claude-opus-5-5",
+};
+
 function claudeModelArg(model: string): string {
-  return model === "fable-5.1" ? "claude-fable-5-1" : model;
+  return CANONICAL_MODEL_NAMES[model] ?? model;
 }
 
 export function providerArgs(

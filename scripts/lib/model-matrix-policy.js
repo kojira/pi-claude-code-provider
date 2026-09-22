@@ -1,6 +1,6 @@
 const EFFORTS = ["low", "medium", "high", "xhigh", "max"];
 const EFFORT_MODELS = ["default", "sonnet", "opus", "haiku"];
-const UNGATED_MODELS = new Set(["fable", "fable-5.1"]);
+const UNGATED_MODELS = new Set(["fable", "fable-5.1", "opus-5.5"]);
 
 export function planModelMatrixCases(advertisedModels) {
   const mediumOnlyModels = advertisedModels.filter((model) => !EFFORT_MODELS.includes(model));

@@ -35,6 +35,16 @@ test("keeps both Fable stages opt-in, one-launch, and accurately targeted", () =
     assert.equal(RELEASE_ORDER.includes("fable-5.1"), false);
 });
 
+test("keeps the Opus 5.5 stage opt-in, one-launch, and accurately targeted", () => {
+    assert.deepEqual(PAID_STAGES["opus-5.5"], {
+        label: "opus 5.5 model",
+        cap: 1,
+        script: "model-matrix.js",
+        args: ["--case", "opus-5.5:medium"],
+    });
+    assert.equal(RELEASE_ORDER.includes("opus-5.5"), false);
+});
+
 test("documented launch caps match the runner and each other", async () => {
     const rows = [...(await readFile(developing, "utf8")).matchAll(/^\| `npm run test:paid:([a-z0-9.-]+)` \| (\d+) \|$/gm)]
         .map(([, name, cap]) => [name, Number(cap)]);

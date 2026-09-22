@@ -13,6 +13,7 @@ test("derives only the Opus context window from the subscription type", () => {
                 { id: "fable", name: "Claude Code Fable", contextWindow: 1_000_000, maxTokens: 64_000 },
                 { id: "fable-5.1", name: "Claude Code Fable 5.1", contextWindow: 1_000_000, maxTokens: 64_000 },
                 { id: "opus", name: "Claude Code Opus", contextWindow: subscriptionType === "pro" ? 200_000 : 1_000_000, maxTokens: 64_000 },
+                { id: "opus-5.5", name: "Claude Code Opus 5.5", contextWindow: subscriptionType === "pro" ? 200_000 : 1_000_000, maxTokens: 64_000 },
                 { id: "haiku", name: "Claude Code Haiku", contextWindow: 200_000, maxTokens: 32_000 },
             ],
         );
