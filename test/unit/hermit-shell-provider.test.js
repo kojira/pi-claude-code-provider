@@ -20,7 +20,7 @@ test("local hermit provider is opt-in and never reads Claude credentials", () =>
     assert.equal(config.api, "openai-completions");
     assert.equal(config.baseUrl, "http://127.0.0.1:18065/v1");
     assert.equal(config.apiKey, "local-only");
-    assert.deepEqual(config.models.map((m) => m.id), ["claude-sonnet-4-6", "claude-opus-4-6", "claude-haiku-4-5"]);
+    assert.deepEqual(config.models.map((m) => m.id), ["claude-sonnet-4-6", "claude-opus-4-6", "claude-opus-5.5", "claude-haiku-4-5"]);
     for (const invalid of ["0", "65536", "abc", "-1"]) {
       process.env.PI_HERMIT_SHELL_PORT = invalid;
       assert.throws(() => register(pi), /PI_HERMIT_SHELL_PORT/);

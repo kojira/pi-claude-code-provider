@@ -31,6 +31,7 @@ export default function registerHermitShell(pi: ExtensionAPI): void {
     models: [
       model("claude-sonnet-4-6", "Claude Sonnet 4.6 (Hermit)"),
       model("claude-opus-4-6", "Claude Opus 4.6 (Hermit)"),
+      model("claude-opus-5.5", "Claude Opus 5.5 (Hermit)"),
       model("claude-haiku-4-5", "Claude Haiku 4.5 (Hermit)"),
     ],
   });
