@@ -38,6 +38,7 @@ export function providerModelsForSubscription(subscriptionType: ClaudeSubscripti
     providerModel("fable", "Claude Code Fable", 1_000_000, 64_000),
     providerModel("fable-5.1", "Claude Code Fable 5.1", 1_000_000, 64_000),
     providerModel("opus", "Claude Code Opus", opusContextWindow, 64_000),
+    providerModel("opus-5.5", "Claude Code Opus 5.5", opusContextWindow, 64_000),
     providerModel("haiku", "Claude Code Haiku", 200_000, 32_000),
   ];
 }

@@ -3,7 +3,7 @@ import test from "node:test";
 import { planModelMatrixCases, servedContextWindowMatches } from "../../scripts/lib/model-matrix-policy.js";
 
 test("keeps Fable aliases selectable but outside the blocking model matrix", () => {
-    const advertisedModels = ["default", "sonnet", "fable", "fable-5.1", "opus", "haiku"];
+    const advertisedModels = ["default", "sonnet", "fable", "fable-5.1", "opus", "opus-5.5", "haiku"];
     const { coreCases, selectableCases } = planModelMatrixCases(advertisedModels);
     const caseNames = (cases) => cases.map(({ model, effort }) => `${model}:${effort}`);
     const coreNames = caseNames(coreCases);
@@ -14,6 +14,8 @@ test("keeps Fable aliases selectable but outside the blocking model matrix", () 
     assert.equal(coreNames.includes("fable-5.1:medium"), false);
     assert.equal(selectableNames.includes("fable:medium"), true);
     assert.equal(selectableNames.includes("fable-5.1:medium"), true);
+    assert.equal(coreNames.includes("opus-5.5:medium"), false);
+    assert.equal(selectableNames.includes("opus-5.5:medium"), true);
 });
 
 test("keeps Pro Opus configured at 200K while tolerating Claude's 1M capability report", () => {

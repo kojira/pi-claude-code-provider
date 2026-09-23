@@ -47,6 +47,7 @@
     "test:paid:fable": "node scripts/paid-test-runner.js fable",
     "test:paid:fable-5.1": "node scripts/paid-test-runner.js fable-5.1",
     "test:paid:opus": "node scripts/paid-test-runner.js opus",
+    "test:paid:opus-5.5": "node scripts/paid-test-runner.js opus-5.5",
     "test:paid:matrix": "node scripts/paid-test-runner.js matrix",
     "test:paid:release": "node scripts/paid-test-runner.js release"
   },

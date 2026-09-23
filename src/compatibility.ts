@@ -13,6 +13,7 @@ export const EXPECTED_MODEL_RESOLUTIONS = Object.freeze({
   fable: "claude-fable-5",
   "fable-5.1": "claude-fable-5-1",
   opus: "claude-opus-5",
+  "opus-5.5": "claude-opus-5-5",
   haiku: "claude-haiku-4-5-20251001",
 });
 
