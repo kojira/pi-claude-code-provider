@@ -29,7 +29,8 @@ else {
   // control tools, even under --no-tools). Mirror that handshake here so the
   // fixture does not stall on the MCP readiness timeout.
   const { spawn } = require("node:child_process");
-  const config = JSON.parse(process.argv[process.argv.indexOf("--mcp-config") + 1]);
+  const configIndex = process.argv.indexOf("--mcp-config");
+  const config = configIndex < 0 ? {} : JSON.parse(process.argv[configIndex + 1]);
   const server = config.mcpServers && config.mcpServers.pi;
   let exposedTools = [];
   const finish = () => {
